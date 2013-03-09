@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+	"name": "Google Tasks for Pomotodo",
+	"version": "0.4",
+	"description": "Replace pomotodo's todo-list with gtasks.",
+	
+	"icons": {
+		"48": "img/icon48.png"
+	},
+	
+	"background": { "page": "background.html" },
+    
+    "content_scripts": [
+		{
+			"matches": ["http://pomotodo.com/*"],
+			"js": ["js/contentscript.js"],
+            "all_frames": true
+		}
+	],
+	
+	"permissions": [
+	    "webRequest",
+        "webRequestBlocking",
+		"tabs",
+		"notifications",
+		"http://pomotodo.com/*",
+		"*://mail.google.com/tasks/ig*"
+	]
+}
