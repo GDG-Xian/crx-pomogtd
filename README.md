@@ -6,6 +6,8 @@ Replace pomotodo's todo-list with gtasks.
 
 ![PomoGTD](http://pic.yupoo.com/greatghoul_v/CorL9BsI/wn7gx.png)
 
+Chrome Webstore: https://chrome.google.com/webstore/detail/google-tasks-for-pomotodo/ffmjdffocnafipfmjjpjekakgkoeigbk
+
 ## History
 
 **2013-03-09 V0.4**
