@@ -1,19 +1,26 @@
 Google Tasks for Pomotodo
 ===========================
-http://pomotodo.com/
 
-Replace pomotodo's todo-list with gtasks.
+[蕃茄土豆][^1] 是一个结合了蕃茄工作法和 GTD 的网页应用程序，是一个体验非常不错的效率工具。
+
+**pomogtd** 是由一个游猴脚本演变而来，用于将蕃茄土豆中的**土豆**替换成 Google Tasks
 
 ![PomoGTD](http://pic.yupoo.com/greatghoul_v/CorL9BsI/wn7gx.png)
 
-Chrome Webstore: https://chrome.google.com/webstore/detail/google-tasks-for-pomotodo/ffmjdffocnafipfmjjpjekakgkoeigbk
+Chrome 商店地址: 
 
-## History
+https://chrome.google.com/webstore/detail/google-tasks-for-pomotodo/ffmjdffocnafipfmjjpjekakgkoeigbk
+
+## 更新记录
 
 **2013-03-09 V0.4**
 
-  * Ignore Google Tasks's `HTTP_HEADERSO` `x-frame-options`
+  * 忽略 Google Tasks 的 `HTTP_HEADERS` `x-frame-options`
 
 **2013-01-11 V0.3**
 
-  + Show loading until google tasks is ready.
+  * 增加：Google Tasks 载入过程中显示载入提示效果 
+
+[^1]: http://pomotodo.com/
+
+ 
