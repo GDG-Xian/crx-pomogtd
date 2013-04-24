@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
 	"name": "Google Tasks™ for Pomotodo",
-	"version": "0.4.1",
-	"description": "Replace pomotodo's todo-list with gtasks.",
+	"version": "0.5",
+	"description": "在番茄土豆中使用 Google Tasks",
 	
 	"icons": {
 		"48": "img/icon48.png"
@@ -13,8 +13,8 @@
     "content_scripts": [
 		{
 			"matches": ["http://pomotodo.com/*"],
-			"js": ["js/contentscript.js"],
-            "all_frames": true
+			"css": ["css/contentstyle.css"],
+			"js": ["lib/jquery-2.0.0.min.js", "js/contentscript.js"]
 		}
 	],
 	
