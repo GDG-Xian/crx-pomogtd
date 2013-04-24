@@ -13,8 +13,8 @@
     "content_scripts": [
 		{
 			"matches": ["http://pomotodo.com/*"],
-			"js": ["js/contentscript.js"],
-            "all_frames": true
+			"css": ["css/contentstyle.css"],
+			"js": ["lib/jquery-2.0.0.min.js", "js/contentscript.js"]
 		}
 	],
 	

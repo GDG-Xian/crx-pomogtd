@@ -1,26 +1,44 @@
-var todo_container = document.getElementById('todo');
+(function($) {
+    var TPLS = {
+        MENUITEM_GTASKS: '' 
+            + '<li id="gtasks_preference">'
+            + '  <label><input type="checkbox" name="gtasks_switch">使用Google Tasks替换土豆</label>'
+            + '</li>',
+        GTASKS: ''
+            + '<div id="gtasks" class="container-outer">'
+            + '  <div class="preloader">Loading Google Tasks ...</div>'
+            + '  <iframe id="gtasks_iframe" src="about:blank" frameborder="0"></iframe>'
+            + '</div>'
+    };
 
-var preloader = document.createElement('div');
-preloader.style.width = '100%';
-preloader.style.height = '305px';
-preloader.style.lineHeight = '305px';
-preloader.style.textAlign = 'center';
-preloader.style.fontWeight = 'bold';
-preloader.style.color = '#888';
-preloader.innerHTML = 'Loading Google Tasks ...';
+    function install_extra_menuitems() {
+        $('.preferences ul').prepend(TPLS.MENUITEM_GTASKS);
+        $('#gtasks_preference :checkbox').on('click', function() {
+            var flag = $(this).prop('checked');
+            toggle_gtasks(flag);
+            $(this).parents('.preferences-container').removeClass('open');
+        }); 
+    }
 
-todo_container.innerHTML = '';
-todo_container.appendChild(preloader);
+    function toggle_gtasks(flag) {
+        var $todo      = $('#todo');
+        if (flag) {
+            var $gtasks    = $(TPLS.GTASKS);
+            var $preloader = $gtasks.find('.preloader');
 
-var iframe = document.createElement('iframe');
-iframe.width = '100%';
-iframe.height = '305';
-iframe.style.display = 'none';
-iframe.frameBorder = '0';
-iframe.src = "https://mail.google.com/tasks/ig";
-iframe.onload = function () {
-    this.style.display = 'block';
-    preloader.style.display = 'none';
-};
+            $todo.hide();
+            $gtasks.insertAfter($todo);
+            $('#gtasks_iframe').load(function() {
+                this.style.display = 'block';
+                $preloader.hide();
+            }).attr('src', 'https://mail.google.com/tasks/ig');
+        } else {
+            $('#gtasks').remove();
+            $todo.show();
+        }
+    }
 
-todo_container.appendChild(iframe);
+    $(function() {
+        install_extra_menuitems(); 
+    });
+})(jQuery);
