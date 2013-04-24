@@ -13,6 +13,10 @@ https://chrome.google.com/webstore/detail/google-tasks-for-pomotodo/ffmjdffocnaf
 
 ## 更新记录
 
+**2013-04-25 V0.5**
+
+  * 添加是否使用 Google Tasks 替换土豆的开关
+
 **2013-03-09 V0.4**
 
   * 忽略 Google Tasks 的 `HTTP_HEADERS` `x-frame-options`

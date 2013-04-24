@@ -1,3 +1,29 @@
+function storage(key, value) {
+    if (value === undefined) {
+        return localStorage[key];
+    } else {
+        localStorage[key] = value; 
+    }
+}
+
+var MESSAGE_DISPATCHER = {
+    'set-option': set_option,
+    'get-option': get_option
+};
+
+function set_option(request, sender, sendResponse) {
+    storage(request.name, request.value);
+}
+
+function get_option(request, sender, sendResponse) {
+    sendResponse(storage(request.name));
+}
+
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+    var handler = MESSAGE_DISPATCHER[request.type] || function() {};
+    handler(request, sender, sendResponse);
+});
+
 /*
 This file provides a workaround for the X-Frame-Options HTTP header 
 that prevents pages from being displayed in frames.
