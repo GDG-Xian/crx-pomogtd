@@ -1,4 +1,6 @@
 (function($) {
+    var port = chrome.runtime.connect({name: "pomogtd"});
+
     var TPLS = {
         MENUITEM_GTASKS: '' 
             + '<li id="gtasks_preference">'
@@ -36,9 +38,16 @@
             $('#gtasks').remove();
             $todo.show();
         }
+        chrome.runtime.sendMessage({ type: 'set-option', name: 'show_gtasks', value: flag});
     }
 
     $(function() {
         install_extra_menuitems(); 
+
+        chrome.runtime.sendMessage({ type: 'get-option', name: 'show_gtasks'}, function(show_gtasks) {
+            var flag = (show_gtasks === 'true') || false;
+            toggle_gtasks(flag);  
+            $('#gtasks_preference :checkbox').prop('checked', flag);
+        });
     });
 })(jQuery);
