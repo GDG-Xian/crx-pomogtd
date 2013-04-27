@@ -1,6 +1,4 @@
 (function($) {
-    var port = chrome.runtime.connect({name: "pomogtd"});
-
     var TPLS = {
         MENUITEM_GTASKS: '' 
             + '<li id="gtasks_preference">'
