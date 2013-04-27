@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
 	"name": "Google Tasks™ for Pomotodo",
-	"version": "0.5",
+	"version": "0.5.1",
 	"description": "在番茄土豆中使用 Google Tasks",
 	
 	"icons": {
