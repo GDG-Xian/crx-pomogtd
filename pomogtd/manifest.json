@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
 	"name": "Google Tasks™ for Pomotodo",
-	"version": "0.5",
+	"version": "0.5.1",
 	"description": "在番茄土豆中使用 Google Tasks",
 	
 	"icons": {
@@ -12,9 +12,9 @@
     
     "content_scripts": [
 		{
-			"matches": ["http://pomotodo.com/*"],
+			"matches": ["*://pomotodo.com/*"],
 			"css": ["css/contentstyle.css"],
-			"js": ["lib/jquery-2.0.0.min.js", "js/contentscript.js"]
+			"js": ["lib/jquery-2.0.0.min.js", "js/apifix.js", "js/contentscript.js"]
 		}
 	],
 	
@@ -22,8 +22,7 @@
 	    "webRequest",
         "webRequestBlocking",
 		"tabs",
-		"notifications",
-		"http://pomotodo.com/*",
+		"*://pomotodo.com/*",
 		"*://mail.google.com/tasks/ig*"
 	]
 }

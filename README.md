@@ -13,17 +13,22 @@ https://chrome.google.com/webstore/detail/google-tasks-for-pomotodo/ffmjdffocnaf
 
 ## 更新记录
 
+**2013-04-25 V0.5.1**
+
+ * 加入对蕃茄土豆 HTTPS 支持
+ * 兼容 Chrome 25.x
+
 **2013-04-25 V0.5**
 
-  * 添加是否使用 Google Tasks 替换土豆的开关
+ * 添加是否使用 Google Tasks 替换土豆的开关
 
 **2013-03-09 V0.4**
 
-  * 忽略 Google Tasks 的 `HTTP_HEADERS` `x-frame-options`
+ * 忽略 Google Tasks 的 `HTTP_HEADERS` `x-frame-options`
 
 **2013-01-11 V0.3**
 
-  * 增加：Google Tasks 载入过程中显示载入提示效果 
+ * 增加：Google Tasks 载入过程中显示载入提示效果 
 
 [^1]: http://pomotodo.com/
 

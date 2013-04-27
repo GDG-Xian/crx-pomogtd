@@ -41,7 +41,7 @@ if (webRequest && webRequest.onHeadersReceived) {
             }
         }
         return {responseHeaders: headers};
-    }), {urls: ["<all_urls>"], types: ["sub_frame"]}, 
+    }), {urls: ["*://mail.google.com/tasks/ig*"], types: ["sub_frame"]}, 
     ["blocking", "responseHeaders"]);
 } else {
     console.log('Google Tasks for Pomotodo can not work in your browser.');
