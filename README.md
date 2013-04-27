@@ -13,7 +13,7 @@ https://chrome.google.com/webstore/detail/google-tasks-for-pomotodo/ffmjdffocnaf
 
 ## 更新记录
 
-**2013-04-25 V0.5.1**
+**2013-04-27 V0.5.1**
 
  * 加入对蕃茄土豆 HTTPS 支持
  * 兼容 Chrome 25.x
